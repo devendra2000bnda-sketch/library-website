@@ -7,19 +7,21 @@
 
 <style>
 
-/* BACKGROUND ANIMATION */
-body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
-    background-size: 400% 400%;
-    animation: bg 10s infinite;
+/* VIDEO BACKGROUND */
+video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 
-@keyframes bg {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
+/* OVERLAY */
+.overlay {
+    background: rgba(0,0,0,0.6);
+    min-height: 100vh;
 }
 
 /* HERO */
@@ -33,11 +35,6 @@ body {
     width: 120px;
     border-radius: 50%;
     box-shadow: 0 0 25px rgba(255,255,255,0.5);
-    transition: 0.3s;
-}
-
-.hero img:hover {
-    transform: scale(1.1);
 }
 
 /* CARD */
@@ -46,125 +43,138 @@ body {
     margin: 20px;
     padding: 20px;
     border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
 /* GRID */
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 15px;
+    gap: 10px;
 }
 
 .price {
     background: #2a5298;
     color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.full {
-    background: orange;
-}
-
-/* BUTTON */
-.btn {
-    display: block;
-    background: green;
-    color: white;
     padding: 15px;
-    text-align: center;
     border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
+    text-align: center;
 }
 
-/* GALLERY */
-.gallery img {
+/* SLIDER */
+.slider {
+    overflow: hidden;
+}
+
+.slide-track {
+    display: flex;
+    width: 400%;
+    animation: scroll 12s infinite linear;
+}
+
+.slide-track img {
     width: 100%;
     border-radius: 10px;
 }
 
+@keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-50%);}
+}
+
+/* BUTTON */
+.btn {
+    background: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: block;
+    border-radius: 10px;
+    text-decoration: none;
+}
+
 /* REVIEW */
 .review {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
+    background: #eee;
+    padding: 10px;
+    border-radius: 8px;
     margin-bottom: 10px;
 }
 
 </style>
-
 </head>
 
 <body>
 
+<!-- VIDEO -->
+<video autoplay muted loop>
+<source src="https://www.w3schools.com/howto/rain.mp4">
+</video>
+
+<div class="overlay">
+
 <!-- HERO -->
 <div class="hero">
-    <img src="logo.png">
-    <h1>Shree Krishna Library</h1>
-    <p>Best Study Environment in Banda</p>
-    <h2 id="seats">Seats Available: 50</h2>
+<img src="logo.png">
+<h1>Shree Krishna Library</h1>
+<p>Best Study Environment in Banda</p>
+<h2 id="seats">Seats Left: 50</h2>
 </div>
 
-<!-- WHY US -->
+<!-- WHY -->
 <div class="card">
 <h2>✨ Why Choose Us?</h2>
 <ul>
-<li>❄️ AC + Fan</li>
-<li>🔇 Silent Zone</li>
-<li>🔌 Charging Points</li>
-<li>🏆 Discipline Award</li>
-<li>⏰ Flexible Slots</li>
+<li>AC + Fan</li>
+<li>Silent Zone</li>
+<li>Charging Points</li>
+<li>Discipline Award</li>
+<li>Flexible Slots</li>
 </ul>
 </div>
 
 <!-- TIMING -->
 <div class="card">
 <h2>⏰ Timings</h2>
-<p>Mon–Sat: <b>6 AM – 9 PM</b></p>
-<p>Sunday: <b>9 AM – 8 PM</b></p>
-<p style="color:red;">⚠️ Follow time strictly</p>
+<p>Mon–Sat: 6 AM – 9 PM</p>
+<p>Sunday: 9 AM – 8 PM</p>
 </div>
 
 <!-- PRICING -->
 <div class="card">
 <h2>💰 Pricing</h2>
 <div class="grid">
-<div class="price">Morning<br>₹350</div>
-<div class="price">Afternoon<br>₹500</div>
-<div class="price">Evening<br>₹350</div>
-<div class="price full">Full Day<br>₹900</div>
+<div class="price">Morning ₹350</div>
+<div class="price">Afternoon ₹500</div>
+<div class="price">Evening ₹350</div>
+<div class="price" style="background:orange;">Full Day ₹900</div>
 </div>
 </div>
 
-<!-- GALLERY -->
+<!-- AUTO SLIDER -->
 <div class="card">
 <h2>📸 Library Gallery</h2>
-<div class="gallery grid">
-<img src="https://source.unsplash.com/300x200/?library">
-<img src="https://source.unsplash.com/300x200/?study">
-<img src="https://source.unsplash.com/300x200/?students">
-<img src="https://source.unsplash.com/300x200/?reading">
+<div class="slider">
+<div class="slide-track">
+<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
+<img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6">
+<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66">
+</div>
 </div>
 </div>
 
 <!-- REVIEWS -->
 <div class="card">
-<h2>⭐ Student Reviews</h2>
-
+<h2>⭐ Reviews</h2>
 <div class="review">Best library in Banda 🔥</div>
-<div class="review">Very peaceful environment 👍</div>
-<div class="review">Affordable and clean ❤️</div>
-
+<div class="review">Very peaceful 👍</div>
+<div class="review">Affordable ❤️</div>
 </div>
 
 <!-- MAP -->
 <div class="card">
 <h2>📍 Location</h2>
-<iframe src="https://maps.google.com/maps?q=banda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+<iframe src="https://maps.google.com/maps?q=banda&output=embed"
 width="100%" height="200"></iframe>
 </div>
 
@@ -174,18 +184,16 @@ width="100%" height="200"></iframe>
 <a class="btn" href="https://wa.me/918411067326">WhatsApp Now</a>
 </div>
 
-<!-- SEAT COUNTER SCRIPT -->
+</div>
+
+<!-- SEAT COUNTER -->
 <script>
 let seats = 50;
 
 setInterval(() => {
-    let change = Math.floor(Math.random() * 3) - 1;
-    seats += change;
-
-    if(seats < 20) seats = 20;
-    if(seats > 60) seats = 60;
-
-    document.getElementById("seats").innerText = "Seats Available: " + seats;
+    seats--;
+    if(seats < 20) seats = 50;
+    document.getElementById("seats").innerText = "Seats Left: " + seats;
 }, 2000);
 </script>
 
