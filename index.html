@@ -1,203 +1,44 @@
 <!DOCTYPE html>
-<html>
-<head>
-<div class="hero">
-<h1>📚 S<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Krishna Library | Banda</title>
+<title>Shree Krishna Library</title>
 
 <style>
-
-/* BACKGROUND ANIMATION */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
-    background-size: 400% 400%;
-    animation: gradientBG 10s ease infinite;
+    font-family: Arial;
+    margin:0;
+    background:#f5f5f5;
 }
-
-@keyframes gradientBG {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
-
-/* HERO */
 .hero {
-    text-align: center;
-    color: white;
-    padding: 70px 20px;
-}
-
-/* CARD */
-.card {
-    background: rgba(255,255,255,0.95);
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 15px;
-    max-width: 800px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-}
-
-/* PRICING */
-.pricing {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
-}
-
-.box {
-    padding: 20px;
-    border-radius: 12px;
-    background: #3949ab;
-    color: white;
-    font-weight: bold;
+    background: purple;
+    color:white;
     text-align:center;
+    padding:60px;
 }
-
-.highlight {
-    background: orange;
-    color: black;
+.card {
+    background:white;
+    margin:15px;
+    padding:20px;
+    border-radius:10px;
 }
-
-/* BUTTON */
-.btn {
-    display: block;
-    padding: 15px;
-    background: green;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: bold;
-}
-
-/* GALLERY */
-.gallery {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.gallery img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-/* FORM */
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
-}
-
-button {
-    margin-top: 10px;
-    padding: 12px;
-    width: 100%;
-    background: #1a237e;
-    color: white;
-    border: none;
-    border-radius: 8px;
-}
-
-.alert {
-    color:red;
-    font-weight:bold;
-}
-
 </style>
+
 </head>
 
 <body>
-hree Krishna Library</h1>
+
+<div class="hero">
+<h1>📚 Shree Krishna Library</h1>
 <p>Best Study Environment in Banda</p>
-<p>🔥 Limited Seats Available</p>
 </div>
 
 <div class="card">
-<h2>✨ Why Choose Us?</h2>
-<ul>
-<li>❄ AC + Fan</li>
-<li>🔕 Silent Zone</li>
-<li>🔌 Charging Points</li>
-<li>🏆 Discipline Award</li>
-<li>⏰ Flexible Slots</li>
-</ul>
+<h2>Timings</h2>
+<p>Mon–Sat: 6 AM – 9 PM</p>
+<p>Sunday: 9 AM – 8 PM</p>
 </div>
-
-<div class="card">
-<h2>⏰ Timings</h2>
-<p>Mon–Sat: <b>6 AM – 9 PM</b></p>
-<p>Sunday: <b>9 AM – 8 PM</b></p>
-<p class="alert">⚠ Follow time strictly</p>
-</div>
-
-<div class="card">
-<h2>💰 Pricing</h2>
-<div class="pricing">
-<div class="box">Morning<br>₹350</div>
-<div class="box">Afternoon<br>₹500</div>
-<div class="box">Evening<br>₹350</div>
-<div class="box highlight">Full Day<br>₹900</div>
-</div>
-</div>
-
-<!-- GALLERY -->
-<div class="card">
-<h2>📸 Library Gallery</h2>
-<div class="gallery">
-<img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
-<img src="https://images.unsplash.com/photo-1512820790803-83ca734da794">
-<img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66">
-<img src="https://images.unsplash.com/photo-1495446815901-a7297e633e8d">
-</div>
-</div>
-
-<!-- MAP -->
-<div class="card">
-<h2>📍 Location</h2>
-<iframe src="https://maps.google.com/maps?q=Banda%20Uttar%20Pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="250"></iframe>
-</div>
-
-<!-- FORM -->
-<div class="card">
-<h2>📝 Book Your Seat</h2>
-<form onsubmit="sendWhatsApp(); return false;">
-<input type="text" id="name" placeholder="Your Name" required>
-<input type="tel" id="phone" placeholder="Mobile Number" required>
-
-<select id="slot">
-<option>Morning</option>
-<option>Afternoon</option>
-<option>Evening</option>
-<option>Full Day</option>
-</select>
-
-<button type="submit">Book Now</button>
-</form>
-</div>
-
-<div class="card">
-<h2>📞 Contact</h2>
-<a class="btn" href="https://wa.me/918411067326">📲 WhatsApp Now</a>
-</div>
-
-<script>
-function sendWhatsApp() {
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let slot = document.getElementById("slot").value;
-
-let msg = `Hello, I want to join Shree Krishna Library.%0AName: ${name}%0APhone: ${phone}%0ASlot: ${slot}`;
-
-window.open(`https://wa.me/918411067326?text=${msg}`);
-}
-</script>
 
 </body>
 </html>
