@@ -7,152 +7,186 @@
 
 <style>
 
+/* BACKGROUND ANIMATION */
 body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f5f5f5;
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(-45deg, #1e3c72, #2a5298, #6a11cb, #2575fc);
+    background-size: 400% 400%;
+    animation: bg 10s infinite;
+}
+
+@keyframes bg {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(135deg, #5f2c82, #49a09d);
-    color:white;
-    text-align:center;
-    padding:70px 20px;
+    text-align: center;
+    color: white;
+    padding: 60px 20px;
 }
 
-/* CARDS */
+.hero img {
+    width: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 25px rgba(255,255,255,0.5);
+    transition: 0.3s;
+}
+
+.hero img:hover {
+    transform: scale(1.1);
+}
+
+/* CARD */
 .card {
-    background:white;
-    margin:15px;
-    padding:20px;
-    border-radius:12px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-/* PRICING GRID */
-.pricing {
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:10px;
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
 }
 
-.box {
-    background:#2e4c9c;
-    color:white;
-    padding:15px;
-    border-radius:10px;
-    text-align:center;
-    font-weight:bold;
+.price {
+    background: #2a5298;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.highlight {
-    background:orange;
+.full {
+    background: orange;
 }
 
 /* BUTTON */
 .btn {
-    display:block;
-    text-align:center;
-    background:green;
-    color:white;
-    padding:15px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
+    display: block;
+    background: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-/* SEAT COUNTER */
-.counter {
-    text-align:center;
-    font-size:35px;
-    color:red;
+/* GALLERY */
+.gallery img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* REVIEW */
+.review {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 </style>
+
 </head>
 
 <body>
 
 <!-- HERO -->
 <div class="hero">
-    <h1>📚 Shree Krishna Library</h1>
+    <img src="logo.png">
+    <h1>Shree Krishna Library</h1>
     <p>Best Study Environment in Banda</p>
-    <p>🔥 Limited Seats Available</p>
+    <h2 id="seats">Seats Available: 50</h2>
 </div>
 
 <!-- WHY US -->
 <div class="card">
-    <h2>✨ Why Choose Us?</h2>
-    <ul>
-        <li>❄️ AC + Fan Facility</li>
-        <li>🔇 Silent Environment</li>
-        <li>🔌 Charging Points</li>
-        <li>🏆 Most Disciplined Student Award</li>
-        <li>⏰ Flexible Study Slots</li>
-    </ul>
+<h2>✨ Why Choose Us?</h2>
+<ul>
+<li>❄️ AC + Fan</li>
+<li>🔇 Silent Zone</li>
+<li>🔌 Charging Points</li>
+<li>🏆 Discipline Award</li>
+<li>⏰ Flexible Slots</li>
+</ul>
 </div>
 
-<!-- TIMINGS -->
+<!-- TIMING -->
 <div class="card">
-    <h2>⏰ Library Timings</h2>
-    <p>📅 Monday to Saturday: <b>6 AM – 9 PM</b></p>
-    <p>📅 Sunday: <b>9 AM – 8 PM</b></p>
-    <p style="color:red;">⚠️ Follow your allotted time slot strictly</p>
-</div>
-
-<!-- SEAT COUNTER -->
-<div class="card">
-    <h2>🔥 Available Seats</h2>
-    <div class="counter" id="seatCounter">25</div>
-    <p style="text-align:center;">Seats Left</p>
+<h2>⏰ Timings</h2>
+<p>Mon–Sat: <b>6 AM – 9 PM</b></p>
+<p>Sunday: <b>9 AM – 8 PM</b></p>
+<p style="color:red;">⚠️ Follow time strictly</p>
 </div>
 
 <!-- PRICING -->
 <div class="card">
-    <h2>💰 Pricing (Monthly)</h2>
+<h2>💰 Pricing</h2>
+<div class="grid">
+<div class="price">Morning<br>₹350</div>
+<div class="price">Afternoon<br>₹500</div>
+<div class="price">Evening<br>₹350</div>
+<div class="price full">Full Day<br>₹900</div>
+</div>
+</div>
 
-    <div class="pricing">
-        <div class="box">Morning<br>6 AM – 11 AM<br>₹350</div>
-        <div class="box">Afternoon<br>11 AM – 4 PM<br>₹500</div>
-        <div class="box">Evening<br>4 PM – 9 PM<br>₹350</div>
-        <div class="box highlight">Full Day<br>6 AM – 9 PM<br>₹900</div>
-    </div>
+<!-- GALLERY -->
+<div class="card">
+<h2>📸 Library Gallery</h2>
+<div class="gallery grid">
+<img src="https://source.unsplash.com/300x200/?library">
+<img src="https://source.unsplash.com/300x200/?study">
+<img src="https://source.unsplash.com/300x200/?students">
+<img src="https://source.unsplash.com/300x200/?reading">
+</div>
 </div>
 
 <!-- REVIEWS -->
 <div class="card">
-    <h2>⭐ Student Reviews</h2>
-    <p>👨‍🎓 Rahul: "Best silent environment!"</p>
-    <p>👩‍🎓 Priya: "Very disciplined place."</p>
-    <p>👨‍🎓 Aman: "Perfect for serious study."</p>
+<h2>⭐ Student Reviews</h2>
+
+<div class="review">Best library in Banda 🔥</div>
+<div class="review">Very peaceful environment 👍</div>
+<div class="review">Affordable and clean ❤️</div>
+
 </div>
 
 <!-- MAP -->
 <div class="card">
-    <h2>📍 Location</h2>
-    <iframe 
-    src="https://maps.google.com/maps?q=banda%20uttar%20pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
-    width="100%" height="200" style="border:0;"></iframe>
+<h2>📍 Location</h2>
+<iframe src="https://maps.google.com/maps?q=banda&t=&z=13&ie=UTF8&iwloc=&output=embed"
+width="100%" height="200"></iframe>
 </div>
 
 <!-- CONTACT -->
 <div class="card">
-    <h2>📞 Contact / Join Now</h2>
-    <p style="text-align:center;">Call / WhatsApp to book your seat</p>
-    <a href="https://wa.me/918411067326" class="btn">📲 WhatsApp Now</a>
+<h2>📞 Contact</h2>
+<a class="btn" href="https://wa.me/918411067326">WhatsApp Now</a>
 </div>
 
-<!-- SCRIPT -->
+<!-- SEAT COUNTER SCRIPT -->
 <script>
-let seats = 25;
+let seats = 50;
 
 setInterval(() => {
-    if(seats > 5){
-        seats--;
-        document.getElementById("seatCounter").innerText = seats;
-    }
-}, 5000);
+    let change = Math.floor(Math.random() * 3) - 1;
+    seats += change;
+
+    if(seats < 20) seats = 20;
+    if(seats > 60) seats = 60;
+
+    document.getElementById("seats").innerText = "Seats Available: " + seats;
+}, 2000);
 </script>
 
 </body>
