@@ -1,61 +1,147 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Krishna Library | Banda</title><style>
-body { font-family: Arial; margin:0; background:#f5f5f5; text-align:center; }
-header { background:#1a237e; color:white; padding:40px; }
-h1 { margin:0; }
-.container { padding:20px; }
+  <meta charset="UTF-8">
+  <title>Shree Krishna Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-.card {
-  background:white;
-  margin:20px auto;
-  padding:20px;
-  border-radius:10px;
-  max-width:600px;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f9;
+    }
 
-.btn {
-  display:inline-block;
-  padding:15px 25px;
-  background:#25D366;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-}
+    header {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
 
-table { width:100%; border-collapse:collapse; }
-td, th { padding:10px; border-bottom:1px solid #ddd; }
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
 
-.notice {
-  color:red;
-  font-weight:bold;
-}
-</style></head><body><header>
-<h1>Shree Krishna Library</h1>
-<p>Peaceful & Disciplined Study Environment</p>
-<p>📍 Banda (U.P.)</p>
-</header><div class="container"><div class="card">
-<h2>📚 Pricing</h2>
-<table>
-<tr><th>Shift</th><th>Timing</th><th>Fee</th></tr>
-<tr><td>Morning</td><td>6 AM - 11 AM</td><td>₹350</td></tr>
-<tr><td>Afternoon</td><td>11 AM - 4 PM</td><td>₹500</td></tr>
-<tr><td>Evening</td><td>4 PM - 9 PM</td><td>₹350</td></tr>
-<tr><td><b>Full Day</b></td><td>6 AM - 10 PM</td><td><b>₹900</b></td></tr>
-</table>
-</div><div class="card">
-<h2>📋 Rules</h2>
-<p>Maintain Silence</p>
-<p>Follow Your Time Slot</p>
-<p class="notice">Do NOT Share Wi-Fi Password</p>
-</div><div class="card">
-<h2>📲 Join Now</h2>
-<a class="btn" href="https://wa.me/918411067326">Join on WhatsApp</a>
-</div></div><footer style="padding:20px; color:#777;">
-© 2026 Shree Krishna Library
-</footer></body>
-</html> 
+    header p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
 
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .price-box {
+      background: #2a5298;
+      color: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .highlight {
+      background: #ff9800;
+      color: black;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 12px;
+      margin-top: 10px;
+      background: green;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #1e3c72;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Shree Krishna Library</h1>
+  <p>📍 Banda (U.P.) | Peaceful & Disciplined Study Zone</p>
+  <p>🔥 Limited Seats Available – Join Now!</p>
+</header>
+
+<div class="container">
+
+  <div class="card">
+    <h2>📚 Why Choose Us?</h2>
+    <ul>
+      <li>❄️ AC + Fan Facility</li>
+      <li>🔇 Silent Environment</li>
+      <li>🔌 Charging Points</li>
+      <li>🏆 Most Disciplined Student Award</li>
+      <li>⏰ Flexible Study Slots</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>⏰ Library Timings</h2>
+    <p style="text-align:center; font-size:16px;">
+      📅 Monday to Saturday: <b>6:00 AM – 9:00 PM</b><br><br>
+      📅 Sunday: <b>9:00 AM – 8:00 PM</b>
+    </p>
+
+    <p style="text-align:center; color:red; font-weight:bold;">
+      ⚠️ Please follow your allotted time slot strictly
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>💰 Pricing (Monthly)</h2>
+    <div class="pricing">
+      <div class="price-box">Morning<br>6 AM – 11 AM<br>₹350</div>
+      <div class="price-box">Afternoon<br>11 AM – 4 PM<br>₹500</div>
+      <div class="price-box">Evening<br>4 PM – 9 PM<br>₹350</div>
+      <div class="price-box highlight">Full Day<br>6 AM – 9 PM<br>₹900</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📞 Contact / Join Now</h2>
+    <p style="text-align:center;">Call / WhatsApp to book your seat</p>
+    
+    <a class="btn" href="https://wa.me/919999999999">📲 WhatsApp Now</a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Shree Krishna Library | All Rights Reserved
+</footer>
+
+</body>
+</html>
