@@ -3,42 +3,157 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shree Krishna Library</title>
+<title>Shree Krishna Library | Banda</title>
 
 <style>
+
 body {
-    font-family: Arial;
     margin:0;
+    font-family: Arial, sans-serif;
     background:#f5f5f5;
 }
+
+/* HERO */
 .hero {
-    background: purple;
+    background: linear-gradient(135deg, #5f2c82, #49a09d);
     color:white;
     text-align:center;
-    padding:60px;
+    padding:70px 20px;
 }
+
+/* CARDS */
 .card {
     background:white;
     margin:15px;
     padding:20px;
-    border-radius:10px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
 }
-</style>
 
+/* PRICING GRID */
+.pricing {
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:10px;
+}
+
+.box {
+    background:#2e4c9c;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+    font-weight:bold;
+}
+
+.highlight {
+    background:orange;
+}
+
+/* BUTTON */
+.btn {
+    display:block;
+    text-align:center;
+    background:green;
+    color:white;
+    padding:15px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+/* SEAT COUNTER */
+.counter {
+    text-align:center;
+    font-size:35px;
+    color:red;
+}
+
+</style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
-<h1>📚 Shree Krishna Library</h1>
-<p>Best Study Environment in Banda</p>
+    <h1>📚 Shree Krishna Library</h1>
+    <p>Best Study Environment in Banda</p>
+    <p>🔥 Limited Seats Available</p>
 </div>
 
+<!-- WHY US -->
 <div class="card">
-<h2>Timings</h2>
-<p>Mon–Sat: 6 AM – 9 PM</p>
-<p>Sunday: 9 AM – 8 PM</p>
+    <h2>✨ Why Choose Us?</h2>
+    <ul>
+        <li>❄️ AC + Fan Facility</li>
+        <li>🔇 Silent Environment</li>
+        <li>🔌 Charging Points</li>
+        <li>🏆 Most Disciplined Student Award</li>
+        <li>⏰ Flexible Study Slots</li>
+    </ul>
 </div>
+
+<!-- TIMINGS -->
+<div class="card">
+    <h2>⏰ Library Timings</h2>
+    <p>📅 Monday to Saturday: <b>6 AM – 9 PM</b></p>
+    <p>📅 Sunday: <b>9 AM – 8 PM</b></p>
+    <p style="color:red;">⚠️ Follow your allotted time slot strictly</p>
+</div>
+
+<!-- SEAT COUNTER -->
+<div class="card">
+    <h2>🔥 Available Seats</h2>
+    <div class="counter" id="seatCounter">25</div>
+    <p style="text-align:center;">Seats Left</p>
+</div>
+
+<!-- PRICING -->
+<div class="card">
+    <h2>💰 Pricing (Monthly)</h2>
+
+    <div class="pricing">
+        <div class="box">Morning<br>6 AM – 11 AM<br>₹350</div>
+        <div class="box">Afternoon<br>11 AM – 4 PM<br>₹500</div>
+        <div class="box">Evening<br>4 PM – 9 PM<br>₹350</div>
+        <div class="box highlight">Full Day<br>6 AM – 9 PM<br>₹900</div>
+    </div>
+</div>
+
+<!-- REVIEWS -->
+<div class="card">
+    <h2>⭐ Student Reviews</h2>
+    <p>👨‍🎓 Rahul: "Best silent environment!"</p>
+    <p>👩‍🎓 Priya: "Very disciplined place."</p>
+    <p>👨‍🎓 Aman: "Perfect for serious study."</p>
+</div>
+
+<!-- MAP -->
+<div class="card">
+    <h2>📍 Location</h2>
+    <iframe 
+    src="https://maps.google.com/maps?q=banda%20uttar%20pradesh&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    width="100%" height="200" style="border:0;"></iframe>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <h2>📞 Contact / Join Now</h2>
+    <p style="text-align:center;">Call / WhatsApp to book your seat</p>
+    <a href="https://wa.me/918411067326" class="btn">📲 WhatsApp Now</a>
+</div>
+
+<!-- SCRIPT -->
+<script>
+let seats = 25;
+
+setInterval(() => {
+    if(seats > 5){
+        seats--;
+        document.getElementById("seatCounter").innerText = seats;
+    }
+}, 5000);
+</script>
 
 </body>
-</html>
+    </html>
