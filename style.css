@@ -15,8 +15,9 @@ overflow-x:hidden;
 .hero{
 height:100vh;
 background:
-linear-gradient(rgba(5,8,22,.75),rgba(5,8,22,.75)),
-url("images/hero.jpg");
+background:
+linear-gradient(rgba(5,8,22,.55),rgba(5,8,22,.75)),
+url("IMG-20260126-WA0026.jpg");
 background-size:cover;
 background-position:center;
 display:flex;
